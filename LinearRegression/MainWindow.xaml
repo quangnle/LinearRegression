@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LinearRegression"
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="LinearRegression.MainWindow"
+        mc:Ignorable="d"
+        Title="Regression" Height="600" Width="800">
+    <Grid Name="grdArea">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="500"/>
+        </Grid.RowDefinitions>
+
+        <!-- Row 0 -->
+
+        <Button x:Name="btnLoadData" Content="Load data" HorizontalAlignment="Left" Margin="25,14,0,0" VerticalAlignment="Top" Width="75" Click="btnLoadData_Click"/>
+
+        <Label x:Name="lblY" Content="Y" HorizontalAlignment="Left" Margin="467,14,0,0" VerticalAlignment="Top" Width="21"/>
+        <ComboBox x:Name="cboY" HorizontalAlignment="Left" Margin="493,14,0,0" VerticalAlignment="Top" Width="100"  Grid.Column="0" Grid.Row="0" SelectedIndex="0"/>
+        <Label x:Name="lblX" Content="X" HorizontalAlignment="Left" Margin="340,14,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboX" HorizontalAlignment="Left" Margin="362,14,0,0" VerticalAlignment="Top" Width="100"  Grid.Column="0" Grid.Row="0" SelectedIndex="0"/>
+        <Label x:Name="label" Content="Degree" HorizontalAlignment="Left" Margin="600,14,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboDegree" HorizontalAlignment="Left" Margin="650,14,0,0" VerticalAlignment="Top" Width="40"  Grid.Column="0" Grid.Row="0" SelectedIndex="0"/>
+        <Button x:Name="btnVisualize" Content="Visualize" HorizontalAlignment="Left" Margin="700,14,0,0" VerticalAlignment="Top" Width="75" Click="btnVisualize_Click"/>
+
+        <!-- Row 1 -->
+
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top"/>
+
+    </Grid>
+
+</Window>
